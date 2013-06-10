@@ -29,7 +29,7 @@ class OrderlyPayPalIpnBundle extends Bundle
     {      
         if (!\Doctrine\DBAL\Types\Type::hasType('enumorderstatus')){
             \Doctrine\DBAL\Types\Type::addType('enumorderstatus', 'Orderly\PayPalIpnBundle\Types\EnumOrderStatus');
-            $em = $this->container->get('doctrine')->getManager();
+            $em = $this->container->get('doctrine')->getEntityManager();
             $em->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('enumorderstatus', 'string');
         }
     }
