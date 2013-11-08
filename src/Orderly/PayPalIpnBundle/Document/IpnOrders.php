@@ -982,6 +982,7 @@ class IpnOrders
      */
     public function setAddressStreet($addressStreet)
     {
+	$addressStreet = $this->convertToUTF8($addressStreet);
         $this->addressStreet = $addressStreet;
     }
 
@@ -2526,5 +2527,10 @@ class IpnOrders
         }else{
             $this->updatedAt = new \DateTime();
         }
+    }
+    
+    private function convertToUTF8($text)
+    {
+	return iconv(mb_detect_encoding($text, mb_detect_order(), true), "UTF-8", $text);
     }
 }
