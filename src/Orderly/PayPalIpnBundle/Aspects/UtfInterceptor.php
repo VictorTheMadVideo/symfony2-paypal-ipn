@@ -1,5 +1,7 @@
 <?php
 
+namespace Orderly\PayPalIpnBundle\Aspects;
+
 use CG\Proxy\MethodInterceptorInterface;
 use CG\Proxy\MethodInvocation;
 

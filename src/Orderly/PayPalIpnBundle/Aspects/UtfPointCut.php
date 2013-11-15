@@ -1,5 +1,8 @@
 <?php
 
+namespace Orderly\PayPalIpnBundle\Aspects;
+
+
 use JMS\AopBundle\Aop\PointcutInterface;
 
 class UtfPointcut implements PointcutInterface
