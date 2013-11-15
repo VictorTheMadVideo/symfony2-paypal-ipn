@@ -17,7 +17,11 @@
             <argument>%paypal_ipn.class.ipn_order_items%</argument>
         </service>
         <service id="utf_interceptor" class="Orderly\PayPalIpnBundle\Aspects\UtfInterceptor">      
-        </service>            
+        </service>   
+        <service id="utf_point_cut" class="Orderly\PayPalIpnBundle\Aspects\UtfPointCut">
+            <tag name="jms.aop.pointcut" />
+            <tag interceptor="utf_interceptor" />     
+        </service>         
     </services>
 
 </container>

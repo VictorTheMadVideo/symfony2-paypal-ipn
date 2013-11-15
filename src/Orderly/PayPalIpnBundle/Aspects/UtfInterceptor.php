@@ -16,7 +16,7 @@ class UtfInterceptor implements MethodInterceptorInterface
     public function intercept(MethodInvocation $invocation)
     {
         list($arg0) = $invocation->arguments;
-        
+                
         if(gettype($arg0) == "string"){
             if(!$this->isUtf8($arg0)){
 
