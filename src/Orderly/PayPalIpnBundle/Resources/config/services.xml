@@ -16,6 +16,8 @@
             <argument>%paypal_ipn.class.ipn_orders%</argument>
             <argument>%paypal_ipn.class.ipn_order_items%</argument>
         </service>
+        <service id="utf_interceptor" class="Orderly\PayPalIpnBundle\Aspects\UtfInterceptor">      
+        </service>            
     </services>
 
 </container>
