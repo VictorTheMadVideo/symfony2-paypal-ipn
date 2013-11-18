@@ -8,11 +8,6 @@ use CG\Proxy\MethodInvocation;
 class UtfInterceptor implements MethodInterceptorInterface
 {
 
-    public function __construct()
-    {
-
-    }
-
     public function intercept(MethodInvocation $invocation)
     {
         list($arg0) = $invocation->arguments;
