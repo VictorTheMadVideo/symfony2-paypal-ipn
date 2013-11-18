@@ -30,15 +30,12 @@ class UtfInterceptor implements MethodInterceptorInterface
         return $invocation->proceed();
     }
     
-    private function isUtf8($string)
-    {
-        // From http://w3.org/International/questions/qa-forms-utf-8.html 
-        if(mb_detect_encoding($string, "UTF-8, ISO-8859-1, GBK") != "UTF-8")
-        {
-            return false;
+    private function isUtf8($string) {
+        if(mb_detect_encoding($string) == "UTF-8"){
+            return true;
         }
-        return true;
-    }
+        return false;
+    }   
     
     private function setToUtf8($string)
     {
