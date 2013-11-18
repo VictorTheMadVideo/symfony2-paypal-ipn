@@ -14,6 +14,6 @@ class UtfPointcut implements PointcutInterface
 
     public function matchesMethod(\ReflectionMethod $method)
     {
-        return false !== strpos($method->name, 'abcdef');
+        return false !== strpos($method->name, 'set');
     }
 }
