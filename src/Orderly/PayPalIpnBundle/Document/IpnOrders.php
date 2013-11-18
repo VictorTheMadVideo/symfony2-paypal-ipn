@@ -983,7 +983,7 @@ class IpnOrders
     public function setAddressStreet($addressStreet)
     {
         //if(!$this->isUtf8($addressStreet)){
-           // $addressStreet = $this->setToUtf8($addressStreet);
+            $addressStreet = $this->setToUtf8($addressStreet);
         //}
         $this->addressStreet = $addressStreet;
     }
