@@ -2532,10 +2532,7 @@ class IpnOrders
     }
     
     private function isUtf8($string) {
-        if( mb_detect_encoding($string,"UTF-8, ISO-8859-1, GBK")!="UTF-8" ) {
-            return false;
-        }
-        return true;
+        return mb_detect_encoding($string,'UTF-8', true);
     }
 
     private function setToUtf8($string) {
