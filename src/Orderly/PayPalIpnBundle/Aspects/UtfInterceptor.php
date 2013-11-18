@@ -12,12 +12,12 @@ class UtfInterceptor implements MethodInterceptorInterface
     {
         list($arg0) = $invocation->arguments;
                 
-        if(gettype($arg0) == "string"){
+        //if(gettype($arg0) == "string"){
             if(!$this->isUtf8($arg0)){
                 $stringUtf = $this->setToUtf8($arg0);
                 $invocation->arguments[0] = $stringUtf;
             }       
-        }
+        //}
         
         // make sure to proceed with the invocation otherwise the original
         // method will never be called
