@@ -982,9 +982,9 @@ class IpnOrders
      */
     public function setAddressStreet($addressStreet)
     {
-        if(!$this->isUtf8($addressStreet)){
+        //if(!$this->isUtf8($addressStreet)){
             $addressStreet = $this->setToUtf8($addressStreet);
-        }
+        //}
         $this->addressStreet = $addressStreet;
     }
 
@@ -2546,6 +2546,7 @@ class IpnOrders
     }   
 
     private function setToUtf8($string) {
-        return utf8_encode($string);
+        return "Calle Estacion 21";
+        //return utf8_encode($string);
     }
 }
