@@ -17,13 +17,13 @@ class UtfInterceptor implements MethodInterceptorInterface
     {
         list($arg0) = $invocation->arguments;
                 
-        /*if(gettype($arg0) == "string"){
-            if(!$this->isUtf8($arg0)){
+        if(gettype($arg0) == "string"){
+            //if(!$this->isUtf8($arg0)){
                 $stringUtf = $this->setToUtf8($arg0);
                 $invocation->arguments[0] = $stringUtf;
-            }
+            //}
            
-        }*/
+        }
         
         // make sure to proceed with the invocation otherwise the original
         // method will never be called
@@ -39,6 +39,7 @@ class UtfInterceptor implements MethodInterceptorInterface
     
     private function setToUtf8($string)
     {
-        return utf8_encode($string);
+        return "Calle Fuen 12343";
+        //return utf8_encode($string);
     }
 }
