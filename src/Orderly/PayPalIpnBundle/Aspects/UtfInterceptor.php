@@ -12,7 +12,7 @@ class UtfInterceptor implements MethodInterceptorInterface
     private $output;
     
     public function __construct() {
-        $this->output = new ConsoleOutput;
+        $this->output = new ConsoleOutput();
     }
     public function intercept(MethodInvocation $invocation)
     {
