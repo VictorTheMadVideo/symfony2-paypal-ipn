@@ -9,7 +9,8 @@ class UtfPointcut implements PointcutInterface
 {
     public function matchesClass(\ReflectionClass $class)
     {
-        if($class->getName() == 'IpnLog' || $class->getName() == 'IpnOrders'){
+        if($class->getName() == 'Orderly\PayPalIpnBundle\Document\IpnLog' || 
+                $class->getName() == 'Orderly\PayPalIpnBundle\Document\IpnOrders'){
             return true;
         }
         return false;
