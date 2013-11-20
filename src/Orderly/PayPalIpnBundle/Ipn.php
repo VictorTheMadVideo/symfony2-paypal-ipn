@@ -398,7 +398,7 @@ class Ipn
         fputs($fp, "Connection: close\r\n\r\n");
         fputs($fp, $postString . "\r\n\r\n");
 
-        $response = '';
+        $response = ''; 
         while (!feof($fp)) {
             $response .= fgets($fp, 1024);
         }

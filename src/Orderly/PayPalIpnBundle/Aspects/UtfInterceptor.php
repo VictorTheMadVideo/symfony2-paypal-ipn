@@ -15,6 +15,8 @@ class UtfInterceptor implements MethodInterceptorInterface
     }
     public function intercept(MethodInvocation $invocation)
     {
+        $this->logger->info("He entrado en el interceptor!!!");
+
         list($arg0) = $invocation->arguments;
                 
         $this->logger->info("Interceptado Set ".$arg0);
