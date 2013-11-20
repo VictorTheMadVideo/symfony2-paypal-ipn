@@ -24,7 +24,7 @@
         </service>   
         <service id="utf_point_cut"
                  class="%orderly_utf_point_cut%">
-            <tag name="jms.aop.pointcut" interceptor="utf_interceptor" />     
+            <tag name="jms_aop.pointcut" interceptor="utf_interceptor" />     
         </service>         
     </services>
 
