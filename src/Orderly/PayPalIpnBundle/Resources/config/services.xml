@@ -19,7 +19,9 @@
             <argument>%paypal_ipn.class.ipn_order_items%</argument>
         </service>
         <service id="utf_interceptor" 
-                 class="%orderly_utf_interceptor%">      
+                 class="%orderly_utf_interceptor%">
+            <argument type="service" id="logger" />
+            <tag name="monolog.logger" />      
         </service>   
         <service id="utf_point_cut"
                  class="%orderly_utf_point_cut%">

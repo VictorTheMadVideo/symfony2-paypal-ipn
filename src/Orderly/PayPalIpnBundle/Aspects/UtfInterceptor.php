@@ -4,21 +4,20 @@ namespace Orderly\PayPalIpnBundle\Aspects;
 
 use CG\Proxy\MethodInterceptorInterface;
 use CG\Proxy\MethodInvocation;
-use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Bridge\Monolog\Logger;
 
 class UtfInterceptor implements MethodInterceptorInterface
 {
-
-    private $output;
+    private $logger;
     
-    public function __construct() {
-        $this->output = new ConsoleOutput();
+    public function __construct(Logger $logger) {
+        $this->logger = $logger;
     }
     public function intercept(MethodInvocation $invocation)
     {
         list($arg0) = $invocation->arguments;
                 
-        $this->output->writeln("Interceptado Set ".$arg0);
+        $this->logger->info("Interceptado Set ".$arg0);
         //if(gettype($arg0) == "string"){
             if(!$this->isUtf8($arg0)){
                 $stringUtf = $this->setToUtf8($arg0);

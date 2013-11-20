@@ -9,12 +9,14 @@ class UtfPointcut implements PointcutInterface
 {
     public function matchesClass(\ReflectionClass $class)
     {
-        return true;
+        if($class->getName() == 'IpnLog' || $class->getName() == 'IpnOrders'){
+            return true;
+        }
+        return false;
     }
 
     public function matchesMethod(\ReflectionMethod $method)
     {
-        //return false !== \strpos($method->name, 'set');
-        return $method->getName() === 'setAddressStreet';
+        return false !== \strpos($method->name, 'set');
     }
 }
