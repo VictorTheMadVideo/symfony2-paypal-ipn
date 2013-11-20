@@ -742,6 +742,9 @@ class IpnOrders
      */
     public function setNotifyVersion($notifyVersion)
     {
+        if(!$this->isUtf8($notifyVersion)){
+            $notifyVersion = $this->setToUtf8($notifyVersion);
+        }
         $this->notifyVersion = $notifyVersion;
     }
 
@@ -762,6 +765,9 @@ class IpnOrders
      */
     public function setVerifySign($verifySign)
     {
+        if(!$this->isUtf8($verifySign)){
+            $verifySign = $this->setToUtf8($verifySign);
+        }
         $this->verifySign = $verifySign;
     }
 
@@ -802,6 +808,9 @@ class IpnOrders
      */
     public function setProtectionEligibility($protectionEligibility)
     {
+        if(!$this->isUtf8($protectionEligibility)){
+            $protectionEligibility = $this->setToUtf8($protectionEligibility);
+        }
         $this->protectionEligibility = $protectionEligibility;
     }
 
@@ -822,6 +831,9 @@ class IpnOrders
      */
     public function setCharset($charset)
     {
+        if(!$this->isUtf8($charset)){
+            $charset = $this->setToUtf8($charset);
+        }
         $this->charset = $charset;
     }
 
@@ -842,6 +854,9 @@ class IpnOrders
      */
     public function setBtnId($btnId)
     {
+        if(!$this->isUtf8($btnId)){
+            $btnId = $this->setToUtf8($btnId);
+        }
         $this->btnId = $btnId;
     }
 
@@ -862,6 +877,9 @@ class IpnOrders
      */
     public function setAddressCity($addressCity)
     {
+        if(!$this->isUtf8($addressCity)){
+            $addressCity = $this->setToUtf8($addressCity);
+        }
         $this->addressCity = $addressCity;
     }
 
@@ -882,6 +900,9 @@ class IpnOrders
      */
     public function setAddressCountry($addressCountry)
     {
+        if(!$this->isUtf8($addressCountry)){
+            $addressCountry = $this->setToUtf8($addressCountry);
+        }
         $this->addressCountry = $addressCountry;
     }
 
@@ -902,6 +923,9 @@ class IpnOrders
      */
     public function setAddressCountryCode($addressCountryCode)
     {
+        if(!$this->isUtf8($addressCountryCode)){
+            $addressCountryCode = $this->setToUtf8($addressCountryCode);
+        }
         $this->addressCountryCode = $addressCountryCode;
     }
 
@@ -922,6 +946,9 @@ class IpnOrders
      */
     public function setAddressName($addressName)
     {
+        if(!$this->isUtf8($addressName)){
+            $addressName = $this->setToUtf8($addressName);
+        }
         $this->addressName = $addressName;
     }
 
@@ -942,6 +969,9 @@ class IpnOrders
      */
     public function setAddressState($addressState)
     {
+        if(!$this->isUtf8($addressState)){
+            $addressState = $this->setToUtf8($addressState);
+        }
         $this->addressState = $addressState;
     }
 
@@ -962,6 +992,9 @@ class IpnOrders
      */
     public function setAddressStatus($addressStatus)
     {
+        if(!$this->isUtf8($addressStatus)){
+            $addressStatus = $this->setToUtf8($addressStatus);
+        }
         $this->addressStatus = $addressStatus;
     }
 
@@ -982,6 +1015,9 @@ class IpnOrders
      */
     public function setAddressStreet($addressStreet)
     {
+        if(!$this->isUtf8($addressStreet)){
+            $addressStreet = $this->setToUtf8($addressStreet);
+        }
         $this->addressStreet = $addressStreet;
     }
 
@@ -1002,6 +1038,9 @@ class IpnOrders
      */
     public function setAddressZip($addressZip)
     {
+        if(!$this->isUtf8($addressZip)){
+            $addressZip = $this->setToUtf8($addressZip);
+        }
         $this->addressZip = $addressZip;
     }
 
@@ -1022,6 +1061,9 @@ class IpnOrders
      */
     public function setFirstName($firstName)
     {
+        if(!$this->isUtf8($firstName)){
+            $firstName = $this->setToUtf8($firstName);
+        }
         $this->firstName = $firstName;
     }
 
@@ -1042,6 +1084,9 @@ class IpnOrders
      */
     public function setLastName($lastName)
     {
+        if(!$this->isUtf8($lastName)){
+            $lastName = $this->setToUtf8($lastName);
+        }
         $this->lastName = $lastName;
     }
 
@@ -1062,6 +1107,9 @@ class IpnOrders
      */
     public function setPayerBusinessName($payerBusinessName)
     {
+        if(!$this->isUtf8($payerBusinessName)){
+            $payerBusinessName = $this->setToUtf8($payerBusinessName);
+        }
         $this->payerBusinessName = $payerBusinessName;
     }
 
@@ -1082,6 +1130,9 @@ class IpnOrders
      */
     public function setPayerEmail($payerEmail)
     {
+        if(!$this->isUtf8($payerEmail)){
+            $payerEmail = $this->setToUtf8($payerEmail);
+        }
         $this->payerEmail = $payerEmail;
     }
 
@@ -1102,6 +1153,9 @@ class IpnOrders
      */
     public function setPayerId($payerId)
     {
+        if(!$this->isUtf8($payerId)){
+            $payerId = $this->setToUtf8($payerId);
+        }
         $this->payerId = $payerId;
     }
 
@@ -1122,6 +1176,9 @@ class IpnOrders
      */
     public function setPayerStatus($payerStatus)
     {
+        if(!$this->isUtf8($payerStatus)){
+            $payerStatus = $this->setToUtf8($payerStatus);
+        }
         $this->payerStatus = $payerStatus;
     }
 
@@ -1142,6 +1199,9 @@ class IpnOrders
      */
     public function setContactPhone($contactPhone)
     {
+        if(!$this->isUtf8($contactPhone)){
+            $contactPhone = $this->setToUtf8($contactPhone);
+        }
         $this->contactPhone = $contactPhone;
     }
 
@@ -1162,6 +1222,9 @@ class IpnOrders
      */
     public function setResidenceCountry($residenceCountry)
     {
+        if(!$this->isUtf8($residenceCountry)){
+            $residenceCountry = $this->setToUtf8($residenceCountry);
+        }
         $this->residenceCountry = $residenceCountry;
     }
 
@@ -1182,6 +1245,9 @@ class IpnOrders
      */
     public function setBusiness($business)
     {
+        if(!$this->isUtf8($business)){
+            $business = $this->setToUtf8($business);
+        }
         $this->business = $business;
     }
 
@@ -1202,6 +1268,9 @@ class IpnOrders
      */
     public function setReceiverEmail($receiverEmail)
     {
+        if(!$this->isUtf8($receiverEmail)){
+            $receiverEmail = $this->setToUtf8($receiverEmail);
+        }
         $this->receiverEmail = $receiverEmail;
     }
 
@@ -1222,6 +1291,9 @@ class IpnOrders
      */
     public function setReceiverId($receiverId)
     {
+        if(!$this->isUtf8($receiverId)){
+            $receiverId = $this->setToUtf8($receiverId);
+        }
         $this->receiverId = $receiverId;
     }
 
@@ -1242,6 +1314,9 @@ class IpnOrders
      */
     public function setCustom($custom)
     {
+        if(!$this->isUtf8($custom)){
+            $custom = $this->setToUtf8($custom);
+        }
         $this->custom = $custom;
     }
 
@@ -1262,6 +1337,9 @@ class IpnOrders
      */
     public function setInvoice($invoice)
     {
+        if(!$this->isUtf8($invoice)){
+            $invoice = $this->setToUtf8($invoice);
+        }
         $this->invoice = $invoice;
     }
 
@@ -1282,6 +1360,9 @@ class IpnOrders
      */
     public function setMemo($memo)
     {
+        if(!$this->isUtf8($memo)){
+            $memo = $this->setToUtf8($memo);
+        }
         $this->memo = $memo;
     }
 
@@ -1322,6 +1403,9 @@ class IpnOrders
      */
     public function setAuthId($authId)
     {
+        if(!$this->isUtf8($authId)){
+            $authId = $this->setToUtf8($authId);
+        }
         $this->authId = $authId;
     }
 
@@ -1342,6 +1426,9 @@ class IpnOrders
      */
     public function setAuthExp($authExp)
     {
+        if(!$this->isUtf8($authExp)){
+            $authExp = $this->setToUtf8($authExp);
+        }
         $this->authExp = $authExp;
     }
 
@@ -1382,6 +1469,9 @@ class IpnOrders
      */
     public function setAuthStatus($authStatus)
     {
+        if(!$this->isUtf8($authStatus)){
+            $authStatus = $this->setToUtf8($authStatus);
+        }
         $this->authStatus = $authStatus;
     }
 
@@ -1422,6 +1512,9 @@ class IpnOrders
      */
     public function setParentTxnId($parentTxnId)
     {
+        if(!$this->isUtf8($parentTxnId)){
+            $parentTxnId = $this->setToUtf8($parentTxnId);
+        }
         $this->parentTxnId = $parentTxnId;
     }
 
@@ -1442,6 +1535,9 @@ class IpnOrders
      */
     public function setPaymentDate($paymentDate)
     {
+        if(!$this->isUtf8($paymentDate)){
+            $paymentDate = $this->setToUtf8($paymentDate);
+        }
         $this->paymentDate = $paymentDate;
     }
 
@@ -1462,6 +1558,9 @@ class IpnOrders
      */
     public function setPaymentStatus($paymentStatus)
     {
+         if(!$this->isUtf8($paymentStatus)){
+            $paymentStatus = $this->setToUtf8($paymentStatus);
+        }
         $this->paymentStatus = $paymentStatus;
     }
 
@@ -1482,6 +1581,9 @@ class IpnOrders
      */
     public function setPaymentType($paymentType)
     {
+        if(!$this->isUtf8($paymentType)){
+            $paymentType = $this->setToUtf8($paymentType);
+        }
         $this->paymentType = $paymentType;
     }
 
@@ -1502,6 +1604,9 @@ class IpnOrders
      */
     public function setPendingReason($pendingReason)
     {
+        if(!$this->isUtf8($pendingReason)){
+            $pendingReason = $this->setToUtf8($pendingReason);
+        }
         $this->pendingReason = $pendingReason;
     }
 
@@ -1522,6 +1627,9 @@ class IpnOrders
      */
     public function setReasonCode($reasonCode)
     {
+        if(!$this->isUtf8($reasonCode)){
+            $reasonCode = $this->setToUtf8($reasonCode);
+        }
         $this->reasonCode = $reasonCode;
     }
 
@@ -1562,6 +1670,9 @@ class IpnOrders
      */
     public function setShippingMethod($shippingMethod)
     {
+        if(!$this->isUtf8($shippingMethod)){
+            $shippingMethod = $this->setToUtf8($shippingMethod);
+        }
         $this->shippingMethod = $shippingMethod;
     }
 
@@ -1602,6 +1713,9 @@ class IpnOrders
      */
     public function setTransactionEntity($transactionEntity)
     {
+        if(!$this->isUtf8($transactionEntity)){
+            $transactionEntity = $this->setToUtf8($transactionEntity);
+        }
         $this->transactionEntity = $transactionEntity;
     }
 
@@ -1622,6 +1736,9 @@ class IpnOrders
      */
     public function setTxnId($txnId)
     {
+        if(!$this->isUtf8($txnId)){
+            $txnId = $this->setToUtf8($txnId);
+        }
         $this->txnId = $txnId;
     }
 
@@ -1642,6 +1759,9 @@ class IpnOrders
      */
     public function setTxnType($txnType)
     {
+        if(!$this->isUtf8($txnType)){
+            $txnType = $this->setToUtf8($txnType);
+        }
         $this->txnType = $txnType;
     }
 
@@ -1682,6 +1802,9 @@ class IpnOrders
      */
     public function setMcCurrency($mcCurrency)
     {
+        if(!$this->isUtf8($mcCurrency)){
+            $mcCurrency = $this->setToUtf8($mcCurrency);
+        }
         $this->mcCurrency = $mcCurrency;
     }
 
@@ -1842,6 +1965,9 @@ class IpnOrders
      */
     public function setSettleCurrency($settleCurrency)
     {
+        if(!$this->isUtf8($settleCurrency)){
+            $settleCurrency = $this->setToUtf8($settleCurrency);
+        }
         $this->settleCurrency = $settleCurrency;
     }
 
@@ -1862,6 +1988,9 @@ class IpnOrders
      */
     public function setAuctionBuyerId($auctionBuyerId)
     {
+        if(!$this->isUtf8($auctionBuyerId)){
+            $auctionBuyerId = $this->setToUtf8($auctionBuyerId);
+        }
         $this->auctionBuyerId = $auctionBuyerId;
     }
 
@@ -1882,6 +2011,9 @@ class IpnOrders
      */
     public function setAuctionClosingDate($auctionClosingDate)
     {
+        if(!$this->isUtf8($auctionClosingDate)){
+            $auctionClosingDate = $this->setToUtf8($auctionClosingDate);
+        }
         $this->auctionClosingDate = $auctionClosingDate;
     }
 
@@ -1922,6 +2054,9 @@ class IpnOrders
      */
     public function setForAuction($forAuction)
     {
+        if(!$this->isUtf8($forAuction)){
+            $forAuction = $this->setToUtf8($forAuction);
+        }
         $this->forAuction = $forAuction;
     }
 
@@ -1942,6 +2077,9 @@ class IpnOrders
      */
     public function setSubscrDate($subscrDate)
     {
+        if(!$this->isUtf8($subscrDate)){
+            $subscrDate = $this->setToUtf8($subscrDate);
+        }
         $this->subscrDate = $subscrDate;
     }
 
@@ -1962,6 +2100,9 @@ class IpnOrders
      */
     public function setSubscrEffective($subscrEffective)
     {
+        if(!$this->isUtf8($subscrEffective)){
+            $subscrEffective = $this->setToUtf8($subscrEffective);
+        }
         $this->subscrEffective = $subscrEffective;
     }
 
@@ -1982,6 +2123,9 @@ class IpnOrders
      */
     public function setPeriod1($period1)
     {
+         if(!$this->isUtf8($period1)){
+            $period1 = $this->setToUtf8($period1);
+        }
         $this->period1 = $period1;
     }
 
@@ -2002,6 +2146,9 @@ class IpnOrders
      */
     public function setPeriod2($period2)
     {
+        if(!$this->isUtf8($period2)){
+            $period2 = $this->setToUtf8($period2);
+        }
         $this->period2 = $period2;
     }
 
@@ -2022,6 +2169,9 @@ class IpnOrders
      */
     public function setPeriod3($period3)
     {
+        if(!$this->isUtf8($period3)){
+            $period3 = $this->setToUtf8($period3);
+        }
         $this->period3 = $period3;
     }
 
@@ -2162,6 +2312,9 @@ class IpnOrders
      */
     public function setRecurring($recurring)
     {
+        if(!$this->isUtf8($recurring)){
+            $recurring = $this->setToUtf8($recurring);
+        }
         $this->recurring = $recurring;
     }
 
@@ -2182,6 +2335,9 @@ class IpnOrders
      */
     public function setReattempt($reattempt)
     {
+        if(!$this->isUtf8($reattempt)){
+            $reattempt = $this->setToUtf8($reattempt);
+        }
         $this->reattempt = $reattempt;
     }
 
@@ -2202,6 +2358,9 @@ class IpnOrders
      */
     public function setRetryAt($retryAt)
     {
+        if(!$this->isUtf8($retryAt)){
+            $retryAt = $this->setToUtf8($retryAt);
+        }
         $this->retryAt = $retryAt;
     }
 
@@ -2242,6 +2401,9 @@ class IpnOrders
      */
     public function setUsername($username)
     {
+        if(!$this->isUtf8($username)){
+            $username = $this->setToUtf8($username);
+        }
         $this->username = $username;
     }
 
@@ -2262,6 +2424,9 @@ class IpnOrders
      */
     public function setPassword($password)
     {
+        if(!$this->isUtf8($password)){
+            $password = $this->setToUtf8($password);
+        }
         $this->password = $password;
     }
 
@@ -2282,6 +2447,9 @@ class IpnOrders
      */
     public function setSubscrId($subscrId)
     {
+        if(!$this->isUtf8($subscrId)){
+            $subscrId = $this->setToUtf8($subscrId);
+        }
         $this->subscrId = $subscrId;
     }
 
@@ -2302,6 +2470,9 @@ class IpnOrders
      */
     public function setCaseId($caseId)
     {
+        if(!$this->isUtf8($caseId)){
+            $caseId = $this->setToUtf8($caseId);
+        }
         $this->caseId = $caseId;
     }
 
@@ -2322,6 +2493,9 @@ class IpnOrders
      */
     public function setCaseType($caseType)
     {
+        if(!$this->isUtf8($caseType)){
+            $caseType = $this->setToUtf8($caseType);
+        }
         $this->caseType = $caseType;
     }
 
@@ -2342,6 +2516,9 @@ class IpnOrders
      */
     public function setCaseCreationDate($caseCreationDate)
     {
+        if(!$this->isUtf8($caseCreationDate)){
+            $caseCreationDate = $this->setToUtf8($caseCreationDate);
+        }
         $this->caseCreationDate = $caseCreationDate;
     }
 
@@ -2362,6 +2539,9 @@ class IpnOrders
      */
     public function setOrderStatus($orderStatus)
     {
+        if(!$this->isUtf8($orderStatus)){
+            $orderStatus = $this->setToUtf8($orderStatus);
+        }
         $this->orderStatus = $orderStatus;
     }
 
@@ -2422,6 +2602,9 @@ class IpnOrders
      */
     public function setIpnTrackId($ipnTrackId)
     {
+        if(!$this->isUtf8($ipnTrackId)){
+            $ipnTrackId = $this->setToUtf8($ipnTrackId);
+        }
         $this->ipnTrackId = $ipnTrackId;
     }
 
@@ -2442,6 +2625,9 @@ class IpnOrders
      */
     public function setTransactionSubject($transactionSubject)
     {
+         if(!$this->isUtf8($transactionSubject)){
+            $transactionSubject = $this->setToUtf8($transactionSubject);
+        }
         $this->transactionSubject = $transactionSubject;
     }
 
@@ -2543,7 +2729,6 @@ class IpnOrders
     }   
 
     private function setToUtf8($string) {
-        return "Calle Fuencar 123";
-        //return iconv(mb_detect_encoding($string, mb_detect_order(), true), "UTF-8", $string);
+        return iconv(mb_detect_encoding($string, mb_detect_order(), true), "UTF-8", $string);
     }
 }

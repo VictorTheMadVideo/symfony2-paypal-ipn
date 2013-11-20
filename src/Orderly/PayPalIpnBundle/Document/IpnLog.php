@@ -257,9 +257,9 @@ class IpnLog
      */
     public function setDetail($detail)
     {
-        /*if(!$this->isUtf8($detail)){
+        if(!$this->isUtf8($detail)){
             $detail = $this->setToUtf8($detail);
-        }*/
+        }
         $this->detail = $detail;
     }
 

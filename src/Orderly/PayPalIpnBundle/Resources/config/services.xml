@@ -6,8 +6,6 @@
 
     <parameters>
         <parameter key="orderly_pay_pal_ipn.class">Orderly\PayPalIpnBundle\Ipn</parameter>
-        <parameter key="orderly_utf_point_cut">Orderly\PayPalIpnBundle\Aspects\UtfPointCut</parameter>
-        <parameter key="orderly_utf_interceptor">Orderly\PayPalIpnBundle\Aspects\UtfInterceptor</parameter>
     </parameters>
 
     <services>
@@ -17,15 +15,7 @@
             <argument>%paypal_ipn.class.ipn_log%</argument>
             <argument>%paypal_ipn.class.ipn_orders%</argument>
             <argument>%paypal_ipn.class.ipn_order_items%</argument>
-        </service>
-        <service id="utf_interceptor" 
-                 class="%orderly_utf_interceptor%">
-            <argument type="service" id="logger" />    
-        </service>   
-        <service id="utf_point_cut"
-                 class="%orderly_utf_point_cut%">
-            <tag name="jms_aop.pointcut" interceptor="utf_interceptor" />     
-        </service>         
+        </service>        
     </services>
 
 </container>
