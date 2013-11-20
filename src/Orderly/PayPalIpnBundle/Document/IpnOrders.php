@@ -2729,6 +2729,7 @@ class IpnOrders
     }   
 
     private function setToUtf8($string) {
-        return iconv(mb_detect_encoding($string, mb_detect_order(), true), "UTF-8", $string);
+        return utf8_encode($string);
+        //return iconv(mb_detect_encoding($string, mb_detect_order(), true), "UTF-8", $string);
     }
 }
