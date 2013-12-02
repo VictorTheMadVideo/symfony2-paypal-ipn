@@ -228,6 +228,14 @@ class Ipn
             $this->_logTransaction('IPN', 'SUCCESS', 'Subscription has been created', $ipnResponse);
             return true;
         }
+        
+        
+        // Check if IPN is an subscription cancel notification
+        // because subscription cancels don't have a payment_status
+        if (isset($this->ipnData['txn_type']) && $this->ipnData['txn_type'] == 'subscr_cancel'){
+            $this->_logTransaction('IPN', 'SUCCESS', 'Subscription has been cancelled', $ipnResponse);
+            return true;
+        }
 
         // The final check is of the payment status. We need to surface this
         // as a class variable so that the calling code can decide how to respond.
