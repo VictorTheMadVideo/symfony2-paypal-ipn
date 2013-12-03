@@ -287,7 +287,7 @@ class Ipn
             // This is very simple: the order fields are any fields which do not end in a number
             // (because those fields belong to the order items)
             // period, amount, mcAmount ends with number and belongs to order. Think condition line should be commented
-            if (preg_match("/.*?(\d+)$/", $key) == 0){
+            if (preg_match("/.*?(\d+)$/", $key) == 0  || preg_match("/period/", $key) == 1){
                 //this code iterate over ipnData fields, check if order have related field and set it
                 $parts = explode('_',$key);
                 foreach($parts as $i => $part)
